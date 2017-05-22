@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel='stylesheet' href='/stylesheets/form.css' type='text/css'>
+
+    <!--<script src=''></script>-->
+
+</head>
+
+<body>
+    <form name='regform' id='reg' method='post'>
+        <table>
+            <caption align="center" style="font-size:24px; color:white">
+                注册
+            </caption>
+            <tr>
+                <td><input id="username" type="text" name="name" placeHolder="用户名"></td>
+                <td id='usernameError'></td>
+            </tr>
+            <tr>
+                <td><input id='password' type="password" name="password" placeHolder="密码"></td>
+                <td id='passwordError '></td>
+            </tr>
+            <tr>
+                <td><input id="repassword" type="password" name="password-re" placeHolder='验证密码'></td>
+                <td id='repasswordError'></td>
+            </tr>
+            <tr>
+                <td><input type="email" name="email" placeHolder="邮箱地址"></td>
+                <td></td>
+            </tr>
+        </table>
+        <% if(!error) error="" %>
+        <div style='color:red;font-size:12px;height:12px;padding-left:45px;font-weight:bold;'><%= error %></div>
+        <div id="div1">
+            <input type="reset" value="重置">
+            <input type="submit" value="注册">
+        </div>
+    </form>
+</body>
+
+</html>

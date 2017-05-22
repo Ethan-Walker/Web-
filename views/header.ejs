@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>西工大校园生活服务平台</title>
+    <link rel='stylesheet' href='/stylesheets/main.css' type='text/css'>
+    <link rel='stylesheet' href='/stylesheets/news.css' type='text/css'>
+    <!--<script src=''></script>-->
+    <script src="/javascripts/jquery.min.js"> </script>
+    <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/form.js"></script>
+    <script src="/javascripts/jquery-ui.min.js"></script>
+
+    
+    <script charset="utf-8" src="/kindeditor-4.1.10/kindeditor-min.js"> </script>
+    <script charset="utf-8" src="/kindeditor-4.1.10/lang/zh_CN.js"> </script>
+    <script>
+      
+        KindEditor.ready(function(K) {  
+             window.editor = K.create('textarea');  
+        }); 
+    </script> 
+</head>
+
+<body>
+<div id='mainbox'>
+       
+ <div id='header'>
+        <div id='log_header'>
+            <div id='loginbar'>
+                <% if(user){ %>
+                <a id="logout" href='/logout'>退出登录</a>
+                <a id='personal' href='/personal'>个人中心</a>
+                <span style='float:right;margin-top:5px;color:white;'>欢迎 <a href='/personal' style='font-weight:bold;font-family:微软雅黑!'><%= user.name %></a> ！</span>
+                
+                <% } else { %>
+                <a id='login' href="/login">登录</a>
+                <a id='register' href='/register'>注册</a>
+                <% } %>
+            </div>
+           
+            <div id='header-main'>
+                <div id="main-title">西工大校园生活服务平台</div>
+                
+            </div>
+
+            </div>
+        <div id="nav">
+            <ul>
+                <li><a id='index' href="/">首页</a></li>
+                <li><a href="/news">校内新闻</a></li>
+                <li><a href="/social">社团动态</a></li>
+                <li><a href="/campusjidi">校园基地</a></li>
+                <li><a href="/fun">生活娱乐</a></li>
+             
+            </ul>
+        </div>
+<div id="content">

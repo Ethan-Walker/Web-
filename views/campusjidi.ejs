@@ -1,0 +1,28 @@
+<%- include header %>
+<div id='newsnews'>
+<div id='news-left'>
+<% if(user){ %>
+<div><a id='add' href='/publishCampus'>添加动态</a></div>
+<% } %>
+<div><a id='item' href='/campusjidi'>基地动态</a> </div>
+
+
+</div>
+
+<div class='news-right'>
+ <% publishes.forEach(function(publish,index){ %>
+ <div class='every'>
+ <p class='newtitle'>
+ <a href="/j/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>" >
+ <%= publish.title %></a></p>
+ <p class='info'>
+    <span> 作者: <a href="/user/<%= publish.author %>" class='newnews-author'> <%= publish.author %> </a></span> 
+    <span>时间: <%= publish.time.second %> </span>
+ </p>
+ </div>
+<% }) %>
+</div>
+
+</div>
+
+<%- include footer %>

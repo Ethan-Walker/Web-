@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+<link rel='stylesheet' href='/stylesheets/form.css' type='text/css'>
+
+<!--<script src=''></script>-->
+
+</head>
+<body>
+<form name='logform' id="log"  method="post">
+  <table>
+    <caption align="center" style="font-size:24px; color:white;margin-top:-20px;margin-bottom:10px;">
+    登录
+    </caption>
+    <tr>
+      <td><input type="text" name="name" placeHolder="用户名"></td>
+    </tr>
+    <tr>
+      <td><input type="password" name="password" placeHolder="密码"></td>
+    </tr>
+  </table>
+         <% if(!error) error="" %>
+        <div style='color:red;font-size:12px;height:12px;padding-left:45px;font-weight:bold;'><%= error %></div>
+        <div id="div1">
+  <div>
+    <input type="reset" value="重置">
+    <input type="submit" value="登陆">
+  </div>
+</form>
+</body>
+</html>

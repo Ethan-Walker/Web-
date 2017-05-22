@@ -1,0 +1,159 @@
+<%- include header %>
+
+ <div id='content-top'>
+            <div id='pic'>
+                    <ul>
+
+                    <li><img src='/images/first.jpg'></li>
+                    <li><img src='/images/second.jpg'></li>         
+                    <li><img src='/images/third.jpg'></li>
+                    <li><img src='/images/fourth.jpg'></li>
+                    <li><img src='/images/fifth.jpg'></li>
+                    
+                    </ul>
+                    
+                    <span id='dir_left'>
+                    <
+                    </span>
+                    <span id='dir_right'>
+                    >
+                    </span>
+               
+
+                <ul id='order'>
+                    <li id='pic1'>1</li>
+                    <li id='pic2'>2</li>
+                    <li id='pic3'>3</li>
+                    <li id='pic4'>4</li>
+                    <li id='pic5'>5</li>
+                </ul>
+            </div>
+ </div>
+
+<div id="content-middle">
+        <div id='link'>
+            <div>
+                <span><a href='http://ykt.nwpu.edu.cn/' target='_blank'id='link-card'>一卡通服务</a></span>
+                <span><a href='http://www.nwpu.edu.cn/' target='_blank'id='link-index'>瓜大官网</a></span>
+                <span><a href='http://self.nwpu.edu.cn:8080/selfservice/' target='_blank'id='link-ruijie'>锐捷充值</a></span>
+                <span><a href='https://uis.nwpu.edu.cn/cas/login?service=https%3A%2F%2Fecampus.nwpu.edu.cn%2Fc%2Fportal%2Flogin' target='_blank'id='aoxiang'>翱翔门户</a></span>
+                <span><a href='http://tupian.nwpu.edu.cn/' target='_blank'id="picture">工大图片网</a></span>
+                <span><a href='' id='english'>
+                    <div id='listening'>外研社听力</div>
+                    <div id='writing'>作文批改网</div>
+                </a>
+                </span> 
+            </div>
+
+            <div>
+                <span><a href='http://bbs.nwpu.edu.cn/' target='_blank'id='sansi'>三航四方</a></span>
+                <span><a href='http://npupt.com/login.php' target='_blank'id='pt'>蒲公英PT</a></span>
+                <span><a href='/campusjidi' id='public'>校园基地</a></span>
+                <span><a href='http://www.kiees.cn/' id='quickpost'>校内快递帮</a></span>
+                <span><a href='http://www.openlab.net.cn/accounts/signin?returnUrl=%2f' target='_blank'id="openlab">开放实验室</a></span>
+                <span><a href='' id='convin'>
+                    <div id='suimi'>随米打印</div>
+                    <div id='batian'>8天在线</div>
+                </a></span>
+            </div>
+
+    </div>
+    <div id='link-title'>
+    </div>
+</div>
+        
+<div id='content-bottom'>
+            <div id='campus-news'>
+                <div class='topbar'>
+                    <span class='title'><a href='/news'>校内新闻</a></span>
+                    <span class='more'><a href='/news'>more</a></span>
+                </div>
+
+                <div class='content-list'>
+                     <% var length = publishes.length>=5?5:publishes.length; %>
+                     <% for(var i=0;i<length;i++){ %>
+                     <% var str='';var publish=publishes[i]; %>
+                     <% if(publish.title.length>=35) { %>
+                     <%  str=publish.title.substr(0,35)+"..."; %>
+                     <% }else {%>
+                     <% str=publish.title;}%>
+                     <div><a href="/u/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>" >
+                        <%= str %></a><span><%= publish.time.day %></span>
+                     </div>
+                     <% } %>
+                </div>
+
+            </div>
+            <div id='jidi'>
+                <div class="topbar">
+                    <span class='title'><a href='/campusjidi'>校园基地</a></span>
+                    <span class='more'><a href="/campusjidi">more</a></span>
+                </div>
+
+                <div class='content-list'>
+                     <% var length = publishCampus.length>=5?5:publishCampus.length; %>
+                     <% for(var i=0;i<length;i++){ %>
+                     <% var str='';var publish=publishCampus[i]; %>
+                     <% var str=''; %>
+                     <% if(publish.title.length>=35) { %>
+                     <%  str=publish.title.substr(0,35)+"..."; %>
+                     <% }else {%>
+                     <% str=publish.title;}%>
+                     <div><a href="/j/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>" >
+                        <%= str %></a><span><%= publish.time.day %></span>
+                     </div>
+                     <% } %> 
+                </div>
+            </div>
+
+            <div id='social'>
+                <div class='topbar'>
+                    <span class='title'><a href='/social'>社团动态</a></span>
+                    <span class='more'><a href='/social'>more</a></span>
+                </div>
+
+                <div class='content-list'>
+                      <% var length = publishSocial.length>=5?5:publishSocial.length; %>
+                     <% for(var i=0;i<length;i++){ %>
+                     <% var str='';var publish=publishSocial[i]; %>
+                     <% var str=''; %>
+                     <% if(publish.title.length>=35) { %>
+                     <%  str=publish.title.substr(0,35)+"..."; %>
+                     <% }else {%>
+                     <% str=publish.title;}%>
+                     <div><a href="/s/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>" >
+                        <%= str %></a><span><%= publish.time.day %></span>
+                     </div>
+                     <% } %>
+                </div>
+
+            </div>
+            <div id='starup'>
+                <div class='topbar'>
+                    <span class='title'><a href='/fun'>生活娱乐</a></span>
+                        <span class='more'>
+                            <a href='/fun'>more</a>
+                        </span>
+
+                </div>
+                <div class='content-list'>
+                     <% var length = publishFun.length>=5?5:publishFun.length; %>
+                     <% for(var i=0;i<length;i++){ %>
+                     <% var str='';var publish=publishFun[i]; %>
+                     <% if(publish.title.length>=35) { %>
+                     <%  str=publish.title.substr(0,35)+"..."; %>
+                     <% }else {%>
+                     <% str=publish.title;}%>
+                     <div><a href="/y/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>" >
+                        <%= str %></a><span><%= publish.time.day %></span>
+                     </div>
+                     <% } %>
+                </div>
+
+            </div>
+            
+</div>
+
+<%- include footer %>
+
+

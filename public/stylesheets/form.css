@@ -1,0 +1,133 @@
+body {
+    background-image: url('/images/bg1.jpg');
+    background-size: 100%;
+}
+
+input {
+    background: no-repeat 0 0 scroll rgba(250, 250, 250, 0.8);
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+#log {
+    margin: 0 auto;
+    background: rgba(204, 204, 204, 0.5);
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -175px;
+}
+
+#log input {
+    height: 35px;
+    width: 254px;
+    margin: 2px auto;
+}
+
+#log div {
+    clear: both;
+    width: 300px;
+    margin: 0px auto;
+}
+
+#log div input {
+    height: 29px;
+    width: 146px;
+    color: white;
+    background-color: #00B4F5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#reg {
+    margin: 0 auto;
+    background: rgba(204, 204, 204, 0.5);
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -150px;
+    margin-left: -175px;
+}
+
+#reg input {
+    height: 35px;
+    width: 250px;
+    margin: 2px auto;
+}
+
+#reg div input {
+    height: 29px;
+    width: 146px;
+    color: white;
+    background-color: #00B4F5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#reg div {
+    clear: both;
+    width: 300px;
+    margin: 0px auto;
+}
+
+
+/*#reg div input {
+    height: 29px;
+    width: 146px;
+    color: white;
+    background-color: #00B4F5;
+    font-weight: bold;
+    font-size: 16px;
+}*/
+
+#log input[type='submit'] {
+    margin-left: 70px;
+    border-radius: 15px;
+    width: 90px;
+    height: 35px;
+    margin-top: 20px;
+}
+
+#log input[type='reset'] {
+    margin-left: 20px;
+    border-radius: 15px;
+    width: 90px;
+    height: 35px;
+    margin-top: 20px;
+}
+
+#reg input[type='submit'] {
+    margin-left: 63px;
+    border-radius: 15px;
+    width: 90px;
+    height: 35px;
+    margin-top: 20px;
+}
+
+#reg input[type='reset'] {
+    margin-left: 20px;
+    border-radius: 15px;
+    width: 90px;
+    height: 35px;
+    margin-top: 20px;
+}
+
+table {
+    margin: 40px auto;
+    margin-bottom: 2px;
+}
+
+.bgcolor {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+input[type='reset']:hover,
+input[type='submit']:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+<%- include header %>
+<% if(user) {%>
+<form method='post' id='publish-content'>
+    
+    <h2>标题:</h2><input type='text' name="title" /><br/>
+    <h3>正文:</h3>
+    <span id='help' onclick="moni()">发表</span>
+    <textarea name='content'>
+    </textarea>
+    <input type='submit' id='publish-submit'>
+    <script>$('#publish-submit').hide();</script>
+    <br/>
+    
+</form>
+
+<% } %>
+<%- include footer %>

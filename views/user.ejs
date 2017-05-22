@@ -1,0 +1,66 @@
+<%- include header %>
+<div id='newsnews'>
+<div id='news-left'>
+
+<div><a style='margin-left:30px;' id='item' href='/user'><% var str=(username===user.name?'我':username)+"的文章";%><%= str %> </a></div> 
+
+</div>
+
+<div class='news-right'>
+
+ <% publishes.forEach(function(publish,index){ %>
+  <div class='every'>
+
+ <p class='newtitle'>
+ <a href="/u/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>"> <%= publish.title %></a></p>
+ <p class='info'>
+     <span>分类:校内新闻</span>
+    <span>时间: <%= publish.time.second %></span>
+ </p>
+ </div>
+
+<% }) %>
+
+
+ <% publishSocial.forEach(function(publish,index){ %>
+  <div class='every'>
+
+ <p class='newtitle'>
+ <a href="/s/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>"> <%= publish.title %></a></p>
+ <p class='info'>
+    <span>分类:社团活动</span>
+    <span>时间: <%= publish.time.second %></span>
+ </p>
+
+<% }) %>
+
+ <% publishCampus.forEach(function(publish,index){ %>
+  <div class='every'>
+
+ <p class='newtitle'>
+ <a href="/j/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>"> <%= publish.title %></a></p>
+ <p class='info'>
+    <span>分类:校园基地</span>
+    <span>时间: <%= publish.time.second %></span>
+    
+ </p>
+</div>
+<% }) %>
+
+ <% publishFun.forEach(function(publish,index){ %>
+  <div class='every'>
+
+ <p class='newtitle'>
+ <a href="/y/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>"> <%= publish.title %></a></p>
+ <p class='info'>
+    <span>分类:生活娱乐</span>
+    <span>时间: <%= publish.time.second %></span>
+ </p>
+</div>
+<% }) %>
+
+</div>
+
+</div>
+
+<%- include footer %>

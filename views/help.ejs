@@ -1,0 +1,106 @@
+<%- include header %>
+
+ <div id='content-top'>
+            <div id='notice'></div>
+            <div id='pic'></div>
+ </div>
+
+<div id="content-middle">
+    <div id='link'>
+            <div>
+                <a href='' id='link-index'><span>瓜大官网</span></a>
+                <a href='' id='link-card'><span>一卡通服务</span></a>
+                <a href='' id='link-ruijie'><span>锐捷充值</span></a>
+                <a href='' id='aoxiang'><span>翱翔门户</span></a>
+                <a href='' id="picture"><span>工大图片网</span></a>
+                <a href='' id='english'>
+                    <div id='listening'><span>外研社听力</span></div>
+                    <div id='writing'><span>作文批改网</span></div>
+                </a>
+            </div>
+
+            <div>
+                <a href='' id='sansi'><span>三航四方</span></a>
+                <a href='' id='pt'><span>蒲公英PT</span></a>
+                <a href='' id='public'><span>校园公众号</span></a>
+                <a href='' id='quickpost'><span>校内快递帮</span></a>
+                <a href='' id="openlab"><span> 开放实验室</span></a>
+                <a href='' id='convin'>
+                    <div id='suimi'><span>随米打印</span></div>
+                    <div id='batian'><span>8天在线</span></div>
+                </a>
+            </div>
+
+    </div>
+    <div id='link-title'>
+    </div>
+</div>
+        
+<div id='content-bottom'>
+            <div id='campus-news'>
+                <div class='topbar'>
+                    <span class='title'><a href='/news'>校内新闻</a></span>
+                    <span class='more'><a href='#'>more</a></span>
+                </div>
+
+                <div class='content-list'>
+                     <% if(publishes.length>5) {publishes = pulishes.substring(0,5);} %>
+                     <% publishes.forEach(function(publish,index){ %>
+                     <div><a href="/u/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>" >
+                        <%= publish.title %></a><span><%= publish.time.day %></span>
+                     </div>
+                     <% }) %>
+                </div>
+
+            </div>
+            <div id='jidi'>
+                <div class="topbar">
+                    <span class='title'>校园基地</span>
+                    <span class='more'><a href="#">more</a></span>
+                </div>
+
+                <div class='content-list'>
+                     <% if(publishCampus.length>5) publishCampus = publishCampus.substring(0,5) %>
+                     <% publishCampus.forEach(function(publish,index){ %>
+                     <div><a href="/u/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>" >
+                        <%= publish.title %></a><span><%= publish.time.day %></span>
+                     </div>
+                     <% }) %> 
+                </div>
+            </div>
+
+            <div id='social'>
+                <div class='topbar'>
+                    <span class='title'>社团动态</span>
+                    <span class='more'><a href='#'>more</a></span>
+                </div>
+
+                <div class='content-list'>
+                    <% if(publishSocial.length>5) publishSocial = publishSocial.substring(0,5) %>
+                     <% publishSocial.forEach(function(publish,index){ %>
+                     <div><a href="/u/<%= publish.author %>/<%= publish.time.second %>/<%= publish.title %>" >
+                        <%= publish.title %></a><span><%= publish.time.day %></span>
+                     </div>
+                     <% }) %>
+                </div>
+
+            </div>
+            <div id='starup'>
+                <div class='topbar'>
+                    <span class='title'>社交平台</span>
+                        <span class='more'>
+                            <a href='#'></a>
+                        </span>
+
+                </div>
+                <div class='content-list'>
+
+                </div>
+
+            </div>
+            
+</div>
+
+<%- include footer %>
+
+

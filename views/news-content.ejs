@@ -1,0 +1,15 @@
+<%- include header %>
+    <div id='con'>
+        <div id="con-title"><%= news.title %></div>
+
+        <div id="con-author"> 作者:<a href='/user/<%= news.author %>'><%= news.author %></a> | 时间: <%= news.time.second %></div>
+        <% if(user&&(user.name==news.author)) { %>
+        <span><a class="edit" name='edit' href="/edit/<%= news.of %>/<%= news.author %>/<%= news.time.second%>/<%= news.title %>">编辑</a></span>
+        <span><a class="edit" href="/remove/<%= news.of %>/<%= news.author %>/<%= news.time.second %>/<%= news.title %>">删除</a></span>
+
+        <% } %>
+        <a class='con-a' href='/news'>返回</a>
+        <div id="con-content"><%- news.content %><div><a class='con-a' href='/news'>返回</a></div> </div>
+    </div>
+        
+<%- include footer %>
